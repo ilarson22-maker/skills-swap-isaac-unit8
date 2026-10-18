@@ -1,89 +1,50 @@
 
-/* Overall page layout */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: white;
-    color: black;
-}
-
-/* Header */
-header {
-    background-color: green;
-    color: white;
-    padding: 20px;
+/* Skill cards layout */
+.skill-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
-}
-
-header h1 {
-    margin: 0;
-}
-
-/* Navigation menu */
-nav {
-    display: flex;
     gap: 20px;
-    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 25px;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Hero section */
-.hero {
-    background-color: #b2c8b3;
-    text-align: center;
-    padding: 70px 20px;
-}
-
-.hero h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 25px;
-}
-
-/* Button */
-.button {
-    display: inline-block;
-    background-color: green;
-    color: white;
-    padding: 12px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.button:hover {
-    background-color: green;
-}
-
-/* Main content sections */
-.content {
+/* Individual skill cards */
+.skill-card {
     background-color: white;
-    margin: 20px;
-    padding: 25px;
+    border: 1px solid #ccc;
     border-radius: 8px;
+    padding: 20px;
+    width: 220px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/* Footer */
-footer {
-    background-color: black;
+/* Card hover effect */
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.skill-card h3 {
+    color: green;
+}
+
+.skill-card button {
+    background-color: green;
     color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 30px;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.skill-card button:hover {
+    background-color: green;
+}
+
+.extra-info {
+    background-color: #b4deb6;
+    padding: 10px;
+    border-radius: 5px;
 }
