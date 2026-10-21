@@ -9,8 +9,16 @@
         <h2>Available Skills</h2>
         <p>Check out what other students can teach you.</p>
 
+        <div class="skill-filters">
+            <button type="button" class="filter-btn active" data-category="All">All</button>
+            <button type="button" class="filter-btn" data-category="Programming">Programming</button>
+            <button type="button" class="filter-btn" data-category="Music">Music</button>
+            <button type="button" class="filter-btn" data-category="Career">Career</button>
+        </div>
+
         <div class="skill-container">
-            <div class="skill-card" onclick="showDetails(this)">
+            
+            <div class="skill-card" data-category="Programming" onclick="showDetails(this)">
                 <h3>Python Programming</h3>
                 <p>Learn the basics of Python coding.</p>
                 <p>Price: $15</p>
@@ -19,7 +27,9 @@
                 <button type="button">More Info</button>
             </div>
 
-            <div class="skill-card" onclick="showDetails(this)">
+            
+            
+            <div class="skill-card" data-category="Career" onclick="showDetails(this)">
                 <h3>Graphic Design</h3>
                 <p>Learn how to create better designs.</p>
                 <p>Price: $10</p>
@@ -28,7 +38,8 @@
                 <button type="button">More Info</button>
             </div>
 
-            <div class="skill-card" onclick="showDetails(this)">
+            
+            <div class="skill-card" data-category="Music" onclick="showDetails(this)">
                 <h3>Guitar Lessons</h3>
                 <p>Learn basic guitar chords and songs.</p>
                 <p>Price: $12</p>
@@ -37,7 +48,8 @@
                 <button type="button">More Info</button>
             </div>
 
-            <div class="skill-card" onclick="showDetails(this)">
+            
+            <div class="skill-card" data-category="Career" onclick="showDetails(this)">
                 <h3>Photography</h3>
                 <p>Learn how to take better pictures.</p>
                 <p>Price: $8</p>
@@ -58,3 +70,8 @@
         <p>Skill Swap helps students connect, teach, and learn from each other.</p>
     </section>
 </main>
+
+<script src="skillswap-functions.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

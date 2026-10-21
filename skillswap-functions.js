@@ -1,11 +1,19 @@
 function filterSkillsByCategory(skills, category) {
-  if (category === 'All') {
-    return skills;
-  }
+    if (category === 'All') {
+        return skills;
+    }
 
-  return skills.filter(skill => skill.category === category);
+    return skills.filter(skill => skill.category === category);
 }
 
-module.exports = {
-  filterSkillsByCategory
-};
+// Allows Jest tests to use the function
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = {
+        filterSkillsByCategory
+    };
+}
+
+// Allows the website to use the function
+if (typeof window !== 'undefined') {
+    window.filterSkillsByCategory = filterSkillsByCategory;
+}
