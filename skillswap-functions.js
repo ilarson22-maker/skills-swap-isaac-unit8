@@ -10,16 +10,26 @@ function calculateTotalCosts(hourlyRate, hours) {
     return hourlyRate * hours;
 }
 
-// Allows Jest tests to use both functions
+function matchSkillsToUser(userNeeds, skills) {
+    return skills.filter(skill =>
+        skill.category === userNeeds.category &&
+        skill.price <= userNeeds.maxPrice
+    );
+}
+
+// Allows Jest tests to use all three functions
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
         filterSkillsByCategory,
-        calculateTotalCosts
+        calculateTotalCosts,
+        matchSkillsToUser
     };
 }
 
-// Allows the website to use both functions
+// Allows the website to use all three functions
 if (typeof window !== 'undefined') {
     window.filterSkillsByCategory = filterSkillsByCategory;
     window.calculateTotalCosts = calculateTotalCosts;
+    window.matchSkillsToUser = matchSkillsToUser;
 }
+
