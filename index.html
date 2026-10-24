@@ -101,6 +101,38 @@
     </p>
 </section>
 
+<section id="find-my-match" class="match-section">
+    <h2>Find My Match</h2>
+    <p>Find a skill that fits your interests and budget.</p>
+
+    <div class="match-form">
+        <label for="match-category">Category Preference:</label>
+        <select id="match-category">
+            <option value="All">All Categories</option>
+            <option value="Programming">Programming</option>
+            <option value="Music">Music</option>
+            <option value="Career">Career</option>
+            <option value="Design">Design</option>
+            <option value="Photography">Photography</option>
+        </select>
+
+        <label for="match-max-price">Maximum Price ($):</label>
+        <input
+            type="number"
+            id="match-max-price"
+            min="0"
+            step="0.01"
+            value="25"
+        >
+
+        <button type="button" id="find-match-button">Find My Match</button>
+    </div>
+
+    <div id="match-results" aria-live="polite">
+        <p>Choose your preferences and click "Find My Match."</p>
+    </div>
+</section>
+
 </main>
 
 <script src="skillswap-functions.js"></script>
