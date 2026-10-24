@@ -6,14 +6,16 @@ function filterSkillsByCategory(skills, category) {
     return skills.filter(skill => skill.category === category);
 }
 
-// Allows Jest tests to use the function
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = {
-        filterSkillsByCategory
-    };
+function calculateTotalCosts(hourlyRate, hours) {
+    return hourlyRate * hours;
 }
 
-// Allows the website to use the function
+module.exports = {
+    filterSkillsByCategory,
+    calculateTotalCosts
+};
+
 if (typeof window !== 'undefined') {
     window.filterSkillsByCategory = filterSkillsByCategory;
+    window.calculateTotalCosts = calculateTotalCosts;
 }
